@@ -8,34 +8,18 @@
 
 ;{} hash-map
 ;[] vectors
-(defn pricing-to-refs [pricing]
-  (map (fn [price] (ref price)))
-  )
-
 (defn initialize-flights [input-flights]
   (map (fn [flight] {:id      (get flight :id),
                      :from    (get flight :from),
                      :to      (get flight :to),
                      :carrier (get flight :carrier),
-                     :pricing (map (fn [price] (ref price)) (get flight :pricing))}
-         ) input-flights)
-  ;(map (fn [flight]
-  ;
-  ;        (ref flight)) input-flights)
-  ;{:id 0
-  ; :from "BRU" :to "ATL"
-  ; :carrier "Delta"
-  ; :pricing [[600 150 0] ; price; # seats available at that price; # seats taken at that price
-  ;           [650  50 0]
-  ;           [700  50 0]
-  ;           [800  50 0]]}
-  )
+                     :pricing (map (fn [price] (ref price)) (get flight :pricing)),
+                     :status  (ref true)}) input-flights))
 
 (defn initialize-customers [input-customers]
   (map (fn [customer] (agent customer)) input-customers)
   ;{:id  0 :from "BRU" :to "ATL" :seats 5 :budget 700}
   )
-
 
 (defn flight-has-seats? [seats-quantity budget flight-seats]
   (if (> (count (filter (fn [x]
@@ -46,7 +30,8 @@
   )
 
 (defn bookable-flight? [to from required-seats budget flight]
-  (if (and (= (get flight :to) to)
+  (if (and (= @(get flight :status) true)
+           (= (get flight :to) to)
            (= (get flight :from) from)
            (flight-has-seats? required-seats budget (get flight :pricing))
            ) true false)
@@ -61,10 +46,6 @@
         ))
     @final-flight))
 
-;:pricing [[600 150 0] ; price; # seats available at that price; # seats taken at that price
-;           [650  50 0]
-;           [700  50 0]
-;           [800  50 0]]}
 (defn book-seats [available-seats quantity-needed budget]
   (let [possible-seats (filter (fn [seat] (if (and (<= (nth @seat 0) budget) (>= (- (nth @seat 1) (nth @seat 2)) quantity-needed))
                                             true
@@ -79,14 +60,12 @@
       ;(println "no seat found for customer")
       )))
 
-
-
-
 (defn fire-customers [customers function]
   (doseq [customer customers]
     (send customer function)
     )
   )
+
 (defn print-flights [flights]
 
   (doseq [flight flights]
@@ -107,14 +86,54 @@
     )
   )
 
-;def prnit flights
-;(defn book-seats )
+;MUST BE CALLED IN A DOSYNC
+(defn disable-flights [carrier flights value]
+  ;first disable those flights
+  (map (fn [flight] (if (= (carrier) @(get flight :carrier))
+                      (ref-set (get flight :status) false)))))
+
+;:pricing [[600 150 0] ; price; # seats available at that price; # seats taken at that price
+;           [650  50 0]
+;           [700  50 0]
+;           [800  50 0]]}
+;MUST BE CALLED IN A DOSYNC
+(defn update-pricing [pricing percentage]
+  (let [price (nth @pricing 0)
+        available-seats (nth @pricing 1)
+        taken-seats (nth @pricing 2)]
+    (ref-set pricing [(* price percentage) available-seats taken-seats])
+    )
+  )
+
+(defn apply-sale [carrier flights]
+  (map (fn [flight] (if (= (carrier) @(get flight :carrier))
+                      (do
+                        (map (fn [price] (update-pricing price 0.8)) (get flight :pricing))
+                        (ref-set (get flight :status) true)))) flights))
+
+
+
+
+(defn end-sale [carrier flights]
+  "End sale: all flights of `carrier` +25% (inverse of -20%)."
+  (map (fn [flight] (if (= (carrier) @(get flight :carrier))
+                      (do
+                        (map (fn [price] (update-pricing price 1.25)) (get flight :pricing))
+                        (ref-set (get flight :status) true)))) flights)
+  )
+
 
 (defn main []
   (println "Initializing.")
   (def flights (initialize-flights input/flights))
   (def customers (initialize-customers input/customers))
   (def pending-customers (atom (count customers)))
+  (def carriers input/carriers)
+  (def time-between-sales input/TIME_BETWEEN_SALES)
+  (def sale-time input/TIME_OF_SALES)
+  (def sales-agent (agent 0))
+  ;(def sales-manager (agent ))
+
   (defn reserve-flight [info]
     (dosync (let [to (get info :to)
                   from (get info :from)
@@ -125,10 +144,31 @@
                 (book-seats (get flight :pricing) seats budget)
                 ;(println "no flight found for customer")
                 )
+              ;COMMUTE THIS SHIT
               (swap! pending-customers dec))))
 
-  (fire-customers customers reserve-flight)
 
+  (defn do-sale [state]
+    (while (and (not= @pending-customers 0) state)
+      ;select a random carrier
+      (let [carrier (rand-nth carriers)]
+        (println "initiating a sales process")
+
+        (dosync
+          (apply-sale carrier flights))
+        (Thread/sleep sale-time)
+        ;sale's over restore prices
+        (dosync
+          (end-sale carrier flights))
+        (println "Sale finished")
+        (Thread/sleep time-between-sales)))
+    false)
+  (println "initiating sales agent")
+  (send sales-agent do-sale)
+  (println "customers to be attended")
+  (println @pending-customers)
+  (fire-customers customers reserve-flight)
+  ;await customers to finish
   (while (not= @pending-customers 0)
     (do)
 
@@ -151,11 +191,3 @@
   )
 
 (main)
-;(doseq [item flights]
-;  (println (get @item :from)))
-;(dosync
-;  (ref-set (first flights) "SI CAMBIO")
-;  )
-;(println "Cambio hecho")
-;(doseq [item flights]
-;  (println item))
