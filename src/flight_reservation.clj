@@ -5,7 +5,9 @@
             [input-random :as input]))
 
 (def logger (agent nil))
-(defn log [& msgs] (send logger (fn [_] (apply println msgs))))
+(defn log [& msgs]
+  ;(send logger (fn [_] (apply println msgs)))
+  )
 ;(defn log [& msgs] nil)
 
 (def flights
@@ -143,10 +145,12 @@
   (initialize-flights input/flights)
   (let [f1 (future (time (process-customers input/customers)))
         f2 (future (sales-process))]
-    @f1
+    (println @f1)
     @f2)
-  (println "Flights:")
-  (print-flights @flights))
+
+  ;(println "Flights:")
+  ;(print-flights @flights)
+   )
 
 (main)
 (shutdown-agents)

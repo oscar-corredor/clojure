@@ -1,8 +1,8 @@
 (ns flight-reservation_concurrent
   (:require [clojure.string]
             [clojure.pprint]
-            [input-random :as input]
-    #_[input-random :as input])
+            [input-sequential-vs-parallel :as input])
+    ;[input-random :as input])
   )
 
 
@@ -39,12 +39,14 @@
 
 (defn find-flight [to from seats budget flights]
   (let [final-flight (atom nil)]
-    (doseq [flight flights]
-      (if (bookable-flight? to from seats budget flight)
-        ;here we can implement so that we find the cheapest flight
-        (swap! final-flight (fn [x] flight))
-        ))
-    @final-flight))
+    ;(doseq [flight flights]
+    ;  (if (bookable-flight? to from seats budget flight)
+    ;    ;here we can implement so that we find the cheapest flight
+    ;    (swap! final-flight (fn [x] flight))
+    ;    ))
+    (rand-nth (filter (fn [flight] (bookable-flight? to from seats budget flight)) flights))
+    ;@final-flight)
+    ))
 
 (defn book-seats [available-seats quantity-needed budget]
   (let [possible-seats (filter (fn [seat] (if (and (<= (nth @seat 0) budget) (>= (- (nth @seat 1) (nth @seat 2)) quantity-needed))
@@ -57,7 +59,6 @@
                  [(nth @(first possible-seats) 0) (nth @(first possible-seats) 1) (+ (nth @(first possible-seats) 2) quantity-needed)])
         ;(println "seat booked")
         )
-      ;(println "no seat found for customer")
       )))
 
 (defn fire-customers [customers function]
@@ -122,72 +123,136 @@
                         (ref-set (get flight :status) true)))) flights)
   )
 
-
-(defn main []
-  (println "Initializing.")
-  (def flights (initialize-flights input/flights))
-  (def customers (initialize-customers input/customers))
-  (def pending-customers (atom (count customers)))
-  (def carriers input/carriers)
-  (def time-between-sales input/TIME_BETWEEN_SALES)
-  (def sale-time input/TIME_OF_SALES)
-  (def sales-agent (agent 0))
-  ;(def sales-manager (agent ))
-
-  (defn reserve-flight [info]
-    (dosync (let [to (get info :to)
-                  from (get info :from)
-                  seats (get info :seats)
-                  budget (get info :budget)
-                  flight (find-flight to from seats budget flights)]
-              (if (not= flight nil)
-                (book-seats (get flight :pricing) seats budget)
-                ;(println "no flight found for customer")
-                )
-              ;COMMUTE THIS SHIT
-              (swap! pending-customers dec))))
-
-
-  (defn do-sale [state]
-    (while (and (not= @pending-customers 0) state)
-      ;select a random carrier
-      (let [carrier (rand-nth carriers)]
-        (println "initiating a sales process")
-
-        (dosync
-          (apply-sale carrier flights))
-        (Thread/sleep sale-time)
-        ;sale's over restore prices
-        (dosync
-          (end-sale carrier flights))
-        (println "Sale finished")
-        (Thread/sleep time-between-sales)))
-    false)
-  (println "initiating sales agent")
-  (send sales-agent do-sale)
-  (println "customers to be attended")
-  (println @pending-customers)
-  (fire-customers customers reserve-flight)
-  ;await customers to finish
-  (while (not= @pending-customers 0)
-    (do)
-
-    )
-  (println "all agents finished")
-  ;(doseq [customer input/customers]
-  ;  ;(println "The flight for customer: ")
-  ;  ;(println customer)
-  ;  ;(println "////////")
-  ;  ;(println (find-flight (get customer :to) (get customer :from) (get customer :seats) (get customer :budget) flights))
-  ;
-  ;  (reserve-flight customer)
-  ;
-  ;  )
-  ;(println "finished printing")
-  (print-flights flights)
-  ;(println "////////")
-  ;(println "Done.")
-
+(defn over-booked-flight? [flight]
+  (let [over-booked-pricings
+        (filter (fn [pricing] (if (< (nth @pricing 1) (nth @pricing 2))
+                                                     true
+                                                     false)) (get flight :pricing))]
+    (if (> (count over-booked-pricings) 0)
+      true))
   )
 
-(main)
+(defn verify-overbooking [flights]
+  (if (> (count (filter over-booked-flight? flights)) 0)
+    true))
+
+
+;init definitions
+(def flights (initialize-flights input/random-flights))
+(def customers (initialize-customers input/customers))
+(def pending-customers (ref (count customers)))
+(def carriers input/carriers)
+(def time-between-sales input/TIME_BETWEEN_SALES)
+(def sale-time input/TIME_OF_SALES)
+(def sale-in-progress (ref false))
+(def sales-agent (agent 0))
+(def erroneous-sales (atom 0))
+(def reservation-retries (atom 0))
+
+;this function assumes all flights belong to the same carrier and the normal price of a seat to be 10
+;this method assumes it is run in a dosync block
+(defn verify-carrier-sale [flights]
+
+  (let [flights-pricings (map (fn [flight] (get flight :pricing)) flights)]
+    ;verify each pricing for the price based on the state of sale-in-progress
+    (let [price (atom -1)]
+      (doseq [flight-pricings flights-pricings]
+        (doseq [pricing flight-pricings]
+          (if (= @price -1)
+              (compare-and-set! price -1 (nth @pricing 0)))
+          (if (not= (nth @pricing 0) @price)
+            (do
+              (println "problem with prices")
+              (swap! erroneous-sales inc))))))))
+
+;(defn reserve-flight [info]
+;
+;  (dosync (let [to (get info :to)
+;                from (get info :from)
+;                seats (get info :seats)
+;                budget (get info :budget)
+;                ;flight (find-flight to from seats budget flights)
+;                flight (find-flight2 flights info)]
+;            ;(swap! sales-attempts inc)
+;            ;(verify-carrier-sale flights)
+;
+;            (if (not= flight nil)
+;              (do
+;                (book-seats (get (get flight :flight) :pricing) seats budget)
+;                  )
+;              )
+;            (commute pending-customers dec))))
+
+;previous version
+(defn reserve-flight [info]
+
+  (dosync (let [to (get info :to)
+                from (get info :from)
+                seats (get info :seats)
+                budget (get info :budget)
+                flight (find-flight to from seats budget flights)
+                ]
+            ;(swap! sales-attempts inc)
+            ;(verify-carrier-sale flights)
+            (swap! reservation-retries inc)
+            (if (not= flight nil)
+              (do
+                (book-seats (get flight :pricing) seats budget)
+                )
+              )
+            (commute pending-customers dec))))
+
+(defn do-sale [state]
+  (while (not= @pending-customers 0)
+    ;select a random carrier
+    (let [carrier (rand-nth carriers)]
+      ;(println "initiating a sales process")
+      (dosync
+        (apply-sale carrier flights)
+        (ref-set sale-in-progress true))
+      (Thread/sleep sale-time)
+      ;sale's over restore prices
+      (dosync
+        (end-sale carrier flights)
+        (ref-set sale-in-progress false))
+      ;(println "Sale finished")
+      (Thread/sleep time-between-sales)))
+  false)
+(defn main []
+  ;for each flight obtain the pricing refs
+  ;get the prices out of every ref
+  ;do a set of it and see if there's more than 1 unique value
+  ;
+  ;(println "Number of flights:")
+  ;(println (count flights))
+  ;(println "Number of customers:")
+  ;(println (count customers))
+
+  (send sales-agent do-sale)
+  (fire-customers customers reserve-flight)
+
+  ;(println (time (find-flight2 flights (second input/customers))))
+  ;(println (time (find-flight  "BOG" "BRU" 2 615 flights)))
+  ;await customers to finish
+  (while (not= @pending-customers 0)
+    (do
+      )
+
+    )
+  ;(println "all agents finished")
+  ;(if (verify-overbooking flights)
+  ;  (println "Flights have been overbooked.")
+  ;  (println "No overbooking detected."))
+  ;(if (> @erroneous-sales 0)
+  ;  (do (println "Inconsistency amongs prices found.")
+  ;      (println @erroneous-sales))
+  ;  (println "No inconsistencies in sales prices"))
+  ;(println "flights attempts")
+  ;(println @sales-attempts)
+  ;(print-flights flights)
+  )
+
+(println (time (main)))
+(println @reservation-retries)
+;(print-flights flights)
+(shutdown-agents)

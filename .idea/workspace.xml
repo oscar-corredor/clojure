@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfa39493-6fb6-4825-b244-cc3246983cbb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/input_sequential_vs_parallel.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/input_single_carrier_random.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/input_single_flight_multiple_customers.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/same_seat_pricing.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/flight_reservation.clj" afterPath="$PROJECT_DIR$/src/flight_reservation.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/flight_reservation_concurrent.clj" afterPath="$PROJECT_DIR$/src/flight_reservation_concurrent.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/input_random.clj" afterPath="$PROJECT_DIR$/src/input_random.clj" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +28,38 @@
       <file leaf-file-name="flight_reservation_concurrent.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/flight_reservation_concurrent.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="175" column="33" lean-forward="false" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
+            <state relative-caret-position="311">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="61" selection-end-column="9" />
+              <folding>
+                <element signature="e#592#752#0" expanded="false" />
+                <element signature="e#2357#2467#0" expanded="false" />
+                <element signature="e#3332#3566#0" expanded="false" />
+                <element signature="e#3859#4210#0" expanded="false" />
+                <element signature="e#5231#5781#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flight_reservation.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="92" selection-end-column="31" />
+              <folding>
+                <element signature="e#574#988#0" expanded="false" />
+                <element signature="e#990#1149#0" expanded="false" />
+                <element signature="e#4137#4267#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input_sequential_vs_parallel.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/input_sequential_vs_parallel.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -32,37 +68,39 @@
       <file leaf-file-name="input_simple.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/input_simple.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="595">
+              <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input_random.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/input_random.clj">
+      <file leaf-file-name="input_single_carrier_random.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/input_single_carrier_random.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-983">
+            <state relative-caret-position="593">
+              <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="same_seat_pricing.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/same_seat_pricing.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flight_reservation.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
+      <file leaf-file-name="input_single_flight_multiple_customers.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/input_single_flight_multiple_customers.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="6" selection-end-line="136" selection-end-column="40" />
-              <folding>
-                <element signature="e#568#982#0" expanded="false" />
-                <element signature="e#984#1143#0" expanded="false" />
-                <element signature="e#1839#1943#0" expanded="false" />
-                <element signature="e#1945#2115#0" expanded="false" />
-                <element signature="e#2117#2486#0" expanded="false" />
-                <element signature="e#3298#3537#0" expanded="false" />
-                <element signature="e#4131#4261#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,6 +118,18 @@
       <find>@</find>
       <find>ref-set</find>
       <find>iniciando</find>
+      <find>filter</find>
+      <find>(get</find>
+      <find>map</find>
+      <find>apply-sale</find>
+      <find>not=</find>
+      <find>shutdown-agents</find>
+      <find>log</find>
+      <find>problem with</find>
+      <find>bookable</find>
+      <find>booking</find>
+      <find>time</find>
+      <find>doSync</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,9 +144,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/flight_reservation.clj" />
         <option value="$PROJECT_DIR$/src/input_simple.clj" />
+        <option value="$PROJECT_DIR$/src/input_single_flight_multiple_customers.clj" />
+        <option value="$PROJECT_DIR$/src/input_single_carrier_same_seat_pricing.clj" />
+        <option value="$PROJECT_DIR$/src/input_single_carrier_random.clj" />
+        <option value="$PROJECT_DIR$/src/input_random.clj" />
+        <option value="$PROJECT_DIR$/src/flight_reservation.clj" />
         <option value="$PROJECT_DIR$/src/flight_reservation_concurrent.clj" />
+        <option value="$PROJECT_DIR$/src/input_sequential_vs_parallel.clj" />
       </list>
     </option>
   </component>
@@ -128,9 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,15 +225,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oskar\Google Drive\Personal\Académico\Segundo Semestre\Multicore Programming\Clojure Project\project\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -709,48 +769,54 @@
       <workItem from="1494140825879" duration="21245000" />
       <workItem from="1494166945751" duration="142000" />
       <workItem from="1494167138125" duration="8045000" />
-      <workItem from="1494231186236" duration="7749000" />
+      <workItem from="1494231186236" duration="7855000" />
+      <workItem from="1494409077517" duration="690000" />
+      <workItem from="1494483776543" duration="8187000" />
+      <workItem from="1494588367228" duration="13572000" />
+      <workItem from="1494664465043" duration="10346000" />
+      <workItem from="1494681087322" duration="22068000" />
+      <workItem from="1494752809584" duration="2001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54587000" />
+    <option name="totallyTimeSpent" value="111557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38336715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.4948052" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22109534" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38539553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1296875" sideWeight="0.4948052" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1296875" sideWeight="0.5051948" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22109534" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,11 +836,179 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/input_random.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_single_flight_multiple_customers.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="136" column="40" lean-forward="false" selection-start-line="136" selection-start-column="6" selection-end-line="136" selection-end-column="40" />
+          <folding>
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation_concurrent.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_simple.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_random.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_single_carrier_random.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="136" column="40" lean-forward="false" selection-start-line="136" selection-start-column="6" selection-end-line="136" selection-end-column="40" />
+          <folding>
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation_concurrent.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_simple.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_random.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="136" column="40" lean-forward="false" selection-start-line="136" selection-start-column="6" selection-end-line="136" selection-end-column="40" />
+          <folding>
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation_concurrent.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_simple.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_random.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="6" selection-end-line="136" selection-end-column="40" />
+          <folding>
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/flight_reservation_concurrent.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2329">
           <caret line="137" column="40" lean-forward="false" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -799,13 +1033,9 @@
         <state relative-caret-position="1411">
           <caret line="83" column="15" lean-forward="false" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
           <folding>
-            <element signature="e#568#982#0" expanded="false" />
-            <element signature="e#984#1143#0" expanded="false" />
-            <element signature="e#1839#1943#0" expanded="false" />
-            <element signature="e#1945#2115#0" expanded="false" />
-            <element signature="e#2117#2486#0" expanded="false" />
-            <element signature="e#3298#3537#0" expanded="false" />
-            <element signature="e#4131#4261#0" expanded="false" />
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,7 +1044,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,13 +1067,9 @@
         <state relative-caret-position="1411">
           <caret line="83" column="15" lean-forward="false" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
           <folding>
-            <element signature="e#568#982#0" expanded="false" />
-            <element signature="e#984#1143#0" expanded="false" />
-            <element signature="e#1839#1943#0" expanded="false" />
-            <element signature="e#1945#2115#0" expanded="false" />
-            <element signature="e#2117#2486#0" expanded="false" />
-            <element signature="e#3298#3537#0" expanded="false" />
-            <element signature="e#4131#4261#0" expanded="false" />
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -846,7 +1078,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -863,13 +1101,9 @@
         <state relative-caret-position="1411">
           <caret line="83" column="15" lean-forward="false" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
           <folding>
-            <element signature="e#568#982#0" expanded="false" />
-            <element signature="e#984#1143#0" expanded="false" />
-            <element signature="e#1839#1943#0" expanded="false" />
-            <element signature="e#1945#2115#0" expanded="false" />
-            <element signature="e#2117#2486#0" expanded="false" />
-            <element signature="e#3298#3537#0" expanded="false" />
-            <element signature="e#4131#4261#0" expanded="false" />
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,7 +1112,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,13 +1135,9 @@
         <state relative-caret-position="2414">
           <caret line="142" column="35" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="35" />
           <folding>
-            <element signature="e#568#982#0" expanded="false" />
-            <element signature="e#984#1143#0" expanded="false" />
-            <element signature="e#1839#1943#0" expanded="false" />
-            <element signature="e#1945#2115#0" expanded="false" />
-            <element signature="e#2117#2486#0" expanded="false" />
-            <element signature="e#3298#3537#0" expanded="false" />
-            <element signature="e#4131#4261#0" expanded="false" />
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -910,7 +1146,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -923,13 +1165,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#568#982#0" expanded="false" />
-            <element signature="e#984#1143#0" expanded="false" />
-            <element signature="e#1839#1943#0" expanded="false" />
-            <element signature="e#1945#2115#0" expanded="false" />
-            <element signature="e#2117#2486#0" expanded="false" />
-            <element signature="e#3298#3537#0" expanded="false" />
-            <element signature="e#4131#4261#0" expanded="false" />
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,7 +1176,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -954,50 +1198,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj" />
     <entry file="file://$PROJECT_DIR$/src/input_simple.clj" />
     <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj" />
+    <entry file="file://$PROJECT_DIR$/src/input_single_flight_multiple_customers.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_single_carrier_same_seat_pricing.clj" />
+    <entry file="file://$PROJECT_DIR$/src/same_seat_pricing.clj.clj" />
+    <entry file="file://$PROJECT_DIR$/src/same_seat_pricing.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/input_random.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-983">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="638">
+          <caret line="83" column="21" lean-forward="false" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_simple.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flight_reservation.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="136" column="40" lean-forward="true" selection-start-line="136" selection-start-column="6" selection-end-line="136" selection-end-column="40" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="92" selection-end-column="31" />
           <folding>
-            <element signature="e#568#982#0" expanded="false" />
-            <element signature="e#984#1143#0" expanded="false" />
-            <element signature="e#1839#1943#0" expanded="false" />
-            <element signature="e#1945#2115#0" expanded="false" />
-            <element signature="e#2117#2486#0" expanded="false" />
-            <element signature="e#3298#3537#0" expanded="false" />
-            <element signature="e#4131#4261#0" expanded="false" />
+            <element signature="e#574#988#0" expanded="false" />
+            <element signature="e#990#1149#0" expanded="false" />
+            <element signature="e#4137#4267#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/input_simple.clj">
+    <entry file="file://$PROJECT_DIR$/src/input_sequential_vs_parallel.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="391">
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input_single_carrier_random.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flight_reservation_concurrent.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="175" column="33" lean-forward="false" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="311">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="61" selection-end-column="9" />
+          <folding>
+            <element signature="e#592#752#0" expanded="false" />
+            <element signature="e#2357#2467#0" expanded="false" />
+            <element signature="e#3332#3566#0" expanded="false" />
+            <element signature="e#3859#4210#0" expanded="false" />
+            <element signature="e#5231#5781#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
